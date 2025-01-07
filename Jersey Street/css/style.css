@@ -1,0 +1,274 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: lavender;
+}
+header {
+  position: fixed;
+  text-align: center;
+  z-index: 1000;
+  /* border: solid; */
+  width: 100vw;
+}
+header.scrolled {
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+header.scrolled .navlink a {
+  color: black;
+}
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  /* border: solid red; */
+  /* background: lavenderblush; */
+  background: transparent;
+  border-bottom: 0.0001px solid rgba(167, 154, 154, 0.377);
+}
+img[alt="logo"] {
+  height: 70px;
+}
+.navlink {
+  /* border: solid; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.navlink li a {
+  color: #333;
+  text-decoration: none;
+  padding: 10px 15px;
+  display: block;
+  /* border: solid green; */
+  width: 180px;
+  color: white;
+}
+
+svg[alt="jerseyico"] {
+  width: 13px;
+  height: 13px;
+  /* border: solid; */
+  /* padding: 1px; */
+  margin-right: 5px;
+}
+.bi {
+  /* border: solid; */
+  padding: 10px;
+  font-size: 14px;
+}
+.container {
+  /**/
+}
+.container h1 {
+  text-align: center;
+  position: relative;
+  bottom: 100px;
+  background-color: lavender;
+  color: #66b662;
+  z-index: 1000;
+  cursor: none;
+}
+.banner {
+  width: 100%;
+  height: 700px;
+  position: relative;
+  overflow: hidden;
+  /* filter: blur(10px); */
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.59),
+    rgba(0, 0, 0, 0.638)
+  );
+  z-index: 1;
+}
+
+img[alt="Banner1"] {
+  width: 100%;
+  height: 800px;
+  object-fit: cover;
+  position: absolute;
+}
+/* .blur {
+  filter: blur(10px);
+  opacity: 0.5px;
+} */
+
+.jerseyscontainer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* flex-wrap: wrap; */
+  /* border: solid; */
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 80px;
+  padding: 10px;
+  width: 80%;
+  margin: auto;
+  border-radius: 10px;
+  position: relative;
+  margin-top: 100px;
+  scroll-behavior: smooth;
+  border-radius: 25px;
+}
+.jerseyscontainer::-webkit-scrollbar {
+  height: 8px;
+}
+
+.jerseyscontainer::-webkit-scrollbar-track {
+  background: linear-gradient(
+    rgba(179, 153, 153, 0.221),
+    transparent
+  ); /* Scrollbar track color */
+  border-radius: 40px; /* Round the track */
+  height: 40px;
+}
+
+.jerseyscontainer::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #30ff00);
+  border-radius: 40px; /* Round the thumb */
+}
+
+.jerseyscontainer::-webkit-scrollbar-thumb:hover {
+  cursor: pointer;
+}
+.jersey1 {
+  /* border: solid green; */
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 600px;
+  flex-shrink: 0;
+  /* min-width: 250px; */
+  /* padding: 10px; */
+  border-radius: 25px 25px 25px 25px;
+  background-color: white;
+  position: relative;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 10px 0px;
+}
+
+.jimg {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  /* border: solid blue; */
+  position: relative;
+  border-radius: 25px 25px 0 25px;
+}
+.jimg img {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  border-radius: 25px 25px 0 25px;
+}
+.jtextarea {
+  /* border: solid red; */
+  padding: 30px;
+  height: 200px;
+  border-radius: 0 0 25px 25px;
+  position: relative;
+  text-align: justify;
+}
+.jtextarea h3 {
+  padding: 0 0 5px;
+  font-size: larger;
+}
+#price {
+  font-size: large;
+  /* border: solid; */
+  padding: 0px 0px 5px;
+}
+#jdesc {
+  /* border: solid; */
+  padding: 10px 0px 10px;
+}
+.jtextarea button {
+  display: flex;
+  padding: 5px 5px 5px 15px;
+  border: transparent;
+  background: #30ff00;
+  color: rgb(34, 32, 32);
+  border-radius: 10px;
+  font-size: 13px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+#Jerseys h1 {
+  text-align: center;
+  margin-top: 20px;
+  color: rgb(16, 115, 208);
+  font-size: 8rem;
+}
+img[alt="ind"] {
+  background-color: lightblue;
+}
+
+#fjerseys h1 {
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: -50px;
+  color: rgb(16, 115, 208);
+  font-size: 8rem;
+}
+
+.fjimg {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+  border-radius: 25px 25px 0 25px;
+  /* background-color: blue; */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+.fjimg img {
+  width: 90%;
+  height: 100%;
+  position: relative;
+  bottom: 0;
+  left: 5%;
+  top: 0;
+  object-fit: cover;
+  border-radius: 25px 25px 0 25px;
+  /* border: solid; */
+  
+}
+
+#foj1 {
+  background-color: lightskyblue;
+}
+#foj2 {
+  background-color: #cd002cda;
+}
+#foj3 {
+  background-color: #133567;
+}
+#foj4 {
+  background-color: #ffd50096;
+}
+#foj5 {
+  background-color: #0e0e12b6;
+}
+#foj6 {
+  background-color: #790024ab;
+}
