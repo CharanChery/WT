@@ -4,7 +4,7 @@ let mainhead;
 document.addEventListener("DOMContentLoaded", () => {
   container = document.querySelector(".container");
   mainhead = document.createElement("h1");
-  mainhead.innerText = "Welcome to Jersey Street";
+  mainhead.innerHTML = "Welcome to <span class='titlehead'>Jersey Street 👕 </span> <br> Your one-stop shop for all your favorite IPL team jerseys";
   container.appendChild(mainhead);
   // mainhead.style.color = "#30ff00";
 
@@ -88,7 +88,7 @@ document.addEventListener("click", (event) => {
     }
     
   }
-  
+
 });
 
 
