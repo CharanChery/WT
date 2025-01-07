@@ -48,11 +48,12 @@ img[alt="logo"] {
   /* border: solid green; */
   width: 180px;
   color: white;
+  font-size: 1.1rem;
 }
 
 svg[alt="jerseyico"] {
-  width: 13px;
-  height: 13px;
+  width: 15px;
+  height: 15px;
   /* border: solid; */
   /* padding: 1px; */
   margin-right: 5px;
@@ -60,7 +61,7 @@ svg[alt="jerseyico"] {
 .bi {
   /* border: solid; */
   padding: 10px;
-  font-size: 14px;
+  font-size: 1.1rem;
 }
 .container {
   /**/
@@ -272,3 +273,77 @@ img[alt="ind"] {
 #foj6 {
   background-color: #790024ab;
 }
+footer{
+  margin-top: 50px;
+}
+footer{
+  background-color: lavender;
+  border-top: 0.1px solid rgba(128, 128, 128, 0.305);
+}
+.footcontainer{
+  /* border: solid; */
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 20px;
+ 
+}
+.logo-area{
+  display: flex;
+  /* flex-grow: 90; */
+  /* border: solid; */
+  height: auto;
+  justify-content: center;
+  align-items: center;
+}
+.logo-area img{
+  width: 300px;
+}
+footer nav a{
+  display: flex;
+  justify-content: space-around;
+  /* align-items: center; */
+  gap: 20px;
+  flex-direction: column;
+  /* border: solid yellow; */
+  padding: 20px;
+  color: rgb(29, 23, 23);
+  text-decoration: none;
+}
+
+.sociallinks a{
+  display: flex;
+  flex-direction: column;
+  padding: 5px;
+  /* border: solid blue; */
+  text-decoration: none;
+  color: rgb(29, 23, 23);
+}
+footer a .bi{
+  font-size: 25px;
+  /* border: solid; */
+}
+.tc a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-bottom: .1px solid rgb(29, 23, 23);
+  color: rgb(29, 23, 23);
+  padding: 20px;
+  text-decoration: none;
+}
+#tos{
+  border-bottom: none;
+}
+.copyrightarea{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(29, 23, 23);
+  padding: 20px;
+  font-size: large;
+}
+
+

@@ -68,3 +68,27 @@ document.querySelectorAll(".linkund").forEach((element) => {
 document.querySelectorAll("#price").forEach((element) => {
   element.style.color = "goldenrod";
 });
+
+// links nav
+document.addEventListener("click", (event) => {
+  if (event.target.id === "nav-jersey") {
+    console.log(event.target.id);
+    event.preventDefault();
+    let jerseysection = document.getElementById("Jerseys");
+    if (jerseysection) {
+      jerseysection.scrollIntoView({ behavior: "smooth" });
+    }
+  }
+  else if(event.target.id === "nav-foot"){
+    console.log(event.target.id);
+    event.preventDefault();
+    let footsection = document.querySelector("footer");
+    if (footsection){
+      footsection.scrollIntoView({behavior: "smooth"});
+    }
+    
+  }
+  
+});
+
+
