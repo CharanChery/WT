@@ -229,9 +229,10 @@ arrayprodnames.forEach((element, index) => {
   proddesc.innerHTML = element.descrption;
 
   let cartbutton = document.createElement("button");
-  cartbutton.innerHTML = "Add to card <i class='bi bi-cart'></i>";
+  cartbutton.innerHTML = "Add to cart <i class='bi bi-cart'></i>";
   cartbutton.addEventListener("click", () => {
     cartarray(element, ++c);
+    c=0
   });
 
   // console.log(`${element.name} card added`);
@@ -279,9 +280,11 @@ footarrayprod.forEach((element, index) => {
   proddesc.innerHTML = element.descrption;
 
   let cartbutton = document.createElement("button");
-  cartbutton.innerHTML = "Add to card <i class='bi bi-cart'></i>";
+  cartbutton.innerHTML = "Add to cart <i class='bi bi-cart'></i>";
   cartbutton.addEventListener("click", () => {
+    // console.log("footarrayclicked");
     cartarray(element, ++c);
+    c=0
   });
 
   // console.log(`${element.name} card added`);
@@ -360,112 +363,168 @@ footarrayprod.forEach((element, index) => {
 // countjerseys[0].innerHTML = 0;
 
 document.addEventListener("DOMContentLoaded", () => {
+  let parentcont = document.querySelectorAll(".parentContainer")[0];
   let carttab = document.querySelectorAll(".cartcontainer")[0];
   let headingcart = document.createElement("h3");
   headingcart.innerHTML = "Your Shopping Cart";
-  carttab.appendChild(headingcart);
+  parentcont.appendChild(headingcart);
+  
 
-  let listitems = document.createElement("div");
-  listitems.classList.add("items");
-  let itemimage = document.createElement("div");
-  itemimage.classList.add("image");
-  listitems.appendChild(itemimage);
-  let imagetag = document.createElement("img");
-  itemimage.appendChild(imagetag);
-  let prodnamediv = document.createElement("div");
-  prodnamediv.classList.add("prodname");
+  // let listitems = document.createElement("div");
+  // listitems.classList.add("items");
+  // let itemimage = document.createElement("div");
+  // itemimage.classList.add("image");
+  // listitems.appendChild(itemimage);
+  // let imagetag = document.createElement("img");
+  // itemimage.appendChild(imagetag);
+  // let prodnamediv = document.createElement("div");
+  // prodnamediv.classList.add("prodname");
 
-  let prodname = document.createElement("h3");
-  prodnamediv.appendChild(prodname);
-  listitems.appendChild(prodnamediv);
+  // let prodname = document.createElement("h3");
+  // prodnamediv.appendChild(prodname);
+  // listitems.appendChild(prodnamediv);
 
-  let quantitydiv = document.createElement("div");
-  quantitydiv.classList.add("quantity");
-  let buttoncount1 = document.createElement("button");
-  buttoncount1.classList.add("minus");
-  buttoncount1.innerHTML = "-";
-  let spancount2 = document.createElement("span");
-  spancount2.classList.add("number");
-  spancount2.innerHTML = 0;
-  if (spancount2.innerHTML <= 1) {
-    buttoncount1.style.background = "rgba(151, 151, 172, 0.632)";
-  }
-  let buttoncount3 = document.createElement("button");
-  buttoncount3.classList.add("plus");
-  buttoncount3.innerHTML = "+";
-  buttoncount1.classList.add("cbtpm");
-  buttoncount3.classList.add("cbtpm");
-  quantitydiv.appendChild(buttoncount1);
-  quantitydiv.appendChild(spancount2);
-  quantitydiv.appendChild(buttoncount3);
+  // let quantitydiv = document.createElement("div");
+  // quantitydiv.classList.add("quantity");
+  // let buttoncount1 = document.createElement("button");
+  // buttoncount1.classList.add("minus");
+  // buttoncount1.innerHTML = "-";
+  // let spancount2 = document.createElement("span");
+  // spancount2.classList.add("number");
+  // spancount2.innerHTML = 0;
+  // if (spancount2.innerHTML <= 1) {
+  //   buttoncount1.style.background = "rgba(151, 151, 172, 0.632)";
+  // }
+  // let buttoncount3 = document.createElement("button");
+  // buttoncount3.classList.add("plus");
+  // buttoncount3.innerHTML = "+";
+  // buttoncount1.classList.add("cbtpm");
+  // buttoncount3.classList.add("cbtpm");
+  // quantitydiv.appendChild(buttoncount1);
+  // quantitydiv.appendChild(spancount2);
+  // quantitydiv.appendChild(buttoncount3);
 
-  listitems.appendChild(quantitydiv);
+  // listitems.appendChild(quantitydiv);
 
-  let cbt = document.createElement("div");
-  cbt.classList.add("cbt");
-
+  // let cbt = document.createElement("div");
+  // cbt.classList.add("cbt");
+let cbt = document.createElement("div");
+cbt.classList.add("cbt");
   let cbut1 = document.createElement("button");
   let cbut2 = document.createElement("button");
   cbut1.id = "close";
   cbut1.innerHTML = "Close";
   cbut2.innerHTML = "Checkout";
+  cbut1.addEventListener("click", () => {
+      parentcont.classList.add("hidden");
+      parentcont.classList.remove("visible");
+    });
 
-  carttab.appendChild(listitems);
+  // carttab.appendChild(listitems);
 
   cbt.appendChild(cbut1);
   cbt.appendChild(cbut2);
-  carttab.appendChild(cbt);
+  parentcont.appendChild(cbt);
 });
+// let parentcont = document.querySelectorAll(".parentContainer")[0];
+// let cbt = document.createElement("div");
+// cbt.classList.add("cbt");
 
+// let cbut1 = document.createElement("button");
+// let cbut2 = document.createElement("button");
+// cbut1.id = "close";
+// cbut1.innerHTML = "Close";
+// cbut2.innerHTML = "Checkout";
+
+// cbut1.addEventListener("click", () => {
+//   carttab.classList.add("hidden");
+//   carttab.classList.remove("visible");
+// });
+
+// // parentcont.appendChild(listitems);
+
+// cbt.appendChild(cbut1);
+// cbt.appendChild(cbut2);
+// parentcont.appendChild(cbt);
 document.addEventListener("DOMContentLoaded", () => {
   //carttab, navcart,
-  let carttab = document.querySelectorAll(".cartcontainer")[0];
-  carttab.classList.add("hidden");
+  let parentcont = document.querySelectorAll(".parentContainer")[0];
+  parentcont.classList.add("hidden");
   let navcart = document.getElementById("cart");
   let close = document.getElementById("close");
   navcart.addEventListener("click", (event) => {
     event.preventDefault();
     console.log("clicking");
 
-    carttab.classList.add("visible");
-    carttab.classList.remove("hidden");
+    parentcont.classList.add("visible");
+    parentcont.classList.remove("hidden");
   });
+
   close.addEventListener("click", () => {
-    carttab.classList.remove("visible");
-    carttab.classList.add("hidden");
+    console.log("close called");
+    parentcont.classList.add("hidden");
+    parentcont.classList.remove("visible");
   }); //button : close
-  document.addEventListener("click", (event) => {
-    if (!navcart.contains(event.target) && !carttab.contains(event.target)) {
-      carttab.classList.remove("visible");
-    }
-  });
+
+  // document.addEventListener("click", (event) => {
+  //   if (!navcart.contains(event.target) && !carttab.contains(event.target)) {
+  //     carttab.classList.remove("visible");
+  //   }
+  // });
 });
 // let navcart = document.getElementById("cart");
 
 let carray = [];
+let quantity = 0;
 function cartarray(element, count) {
-  carray.push(element);
-  console.log(carray[0].name);
-  updateCartUI(carray,count);
+  let existproduct = carray.filter((i) => {
+    return i.name == element.name;
+  });
+  console.log("existing product array:", existproduct);
+  if (existproduct.length >= 1) {
+    ++quantity;
+  } else {
+    carray.push(element);
+  }
+  carray.forEach((item) => {
+    if (item.name == element.name) {
+      if (item["quantity"] > 1) {
+        item["quantity"] += 1;
+      } else if (item["quantity"] == 0) {
+        item["quantity"] += 1;
+      } else {
+        item["quantity"] = count;
+      }
+    }
+  });
+
+  console.log("quantity:", quantity, "count", count);
+  console.log(carray);
+  updateCartUI(carray, quantity, count);
 }
+let countjerseys = document.querySelectorAll(".countjersey");
+countjerseys[0].innerHTML = 0;
 
-function updateCartUI(carray,count) {
-
+function updateCartUI(carray, quantity, count) {
+  let countjerseys = document.querySelectorAll(".countjersey");
+  let parentcont = document.querySelectorAll(".parentContainer")[0];
   let carttab = document.querySelector(".cartcontainer");
   carttab.innerHTML = ""; // Clear the current cart content
-  
+
   // Display the updated cart items
-  carray.forEach((item,ind, org) => {
+  carray.forEach((item, ind, org) => {
+    countjerseys[0].innerHTML = org.length;
+
     let listitems = document.createElement("div");
     listitems.classList.add("items");
-    
+
     let itemimage = document.createElement("div");
     itemimage.classList.add("image");
     let imagetag = document.createElement("img");
     imagetag.src = item.imgurl; // Set item image
     itemimage.appendChild(imagetag);
-    listitems.appendChild(itemimage)
-    
+    listitems.appendChild(itemimage);
+
     let prodnamediv = document.createElement("div");
     prodnamediv.classList.add("prodname");
     let prodname = document.createElement("h3");
@@ -478,28 +537,82 @@ function updateCartUI(carray,count) {
     let buttoncount1 = document.createElement("button");
     buttoncount1.classList.add("minus");
     buttoncount1.innerHTML = "-";
-    
+    buttoncount1.addEventListener("click", () => {
+      updatequantity("-", item.name, count);
+      countjerseys[0].innerHTML = org.length;
+    });
+
     let spancount2 = document.createElement("span");
     spancount2.classList.add("number");
-    spancount2.innerHTML = item;
-    
+    spancount2.innerHTML = item.quantity;
+
     let buttoncount3 = document.createElement("button");
     buttoncount3.classList.add("plus");
     buttoncount3.innerHTML = "+";
+    buttoncount3.addEventListener("click", (event) => {
+      updatequantity("+", item.name);
+      countjerseys[0].innerHTML = org.length;
+    });
+
+    // let cbt = document.createElement("div");
+    // cbt.classList.add("cbt");
+
+    // let cbut1 = document.createElement("button");
+    // let cbut2 = document.createElement("button");
+    // cbut1.id = "close";
+    // cbut1.innerHTML = "Close";
+    // cbut2.innerHTML = "Checkout";
+
+    // cbut1.addEventListener("click", () => {
+    //   carttab.classList.add("hidden");
+    //   carttab.classList.remove("visible");
+    // });
+
+    carttab.appendChild(listitems);
+
+    // cbt.appendChild(cbut1);
+    // cbt.appendChild(cbut2);
+    // carttab.appendChild(cbt);
 
     quantitydiv.appendChild(buttoncount1);
     quantitydiv.appendChild(spancount2);
     quantitydiv.appendChild(buttoncount3);
-    
+
     listitems.appendChild(quantitydiv);
     carttab.appendChild(listitems);
-    let countjerseys = document.querySelectorAll(".countjersey");
-    countjerseys[0].innerHTML = org.length
+    parentcont.appendChild(carttab);
   });
 }
 
 
+function updatequantity(operator, name, count) {
+  console.log(name);
 
+  if (operator === "+") {
+    carray.forEach((i) => {
+      console.log(i.name);
+
+      if (i.name == name) {
+        console.log(i.quantity + 1);
+        i.quantity++;
+      }
+    });
+  } else {
+    carray.forEach((i, index) => {
+      if (i.name === name) {
+        i.quantity--;
+      }
+      console.log(i.quantity);
+
+      if (i.quantity == 0) {
+        carray.pop(index);
+        count = 0;
+      }
+    });
+  }
+
+  updateCartUI(carray, quantity, count);
+}
 
 //   let quantity = [];
 //   quantity.push(count);

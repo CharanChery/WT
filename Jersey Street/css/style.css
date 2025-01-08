@@ -14,6 +14,7 @@
 }
 body {
   background: lavender;
+  overflow-x: auto;
 }
 header {
   position: fixed;
@@ -23,7 +24,7 @@ header {
   width: 100vw;
 }
 header.scrolled {
-  background: white;
+  background: lavender;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 header.scrolled .navlink a {
@@ -79,7 +80,7 @@ svg[alt="jerseyico"] {
   width: 20px;
   height: 20px;
   border-radius: 100%;
-  background-color: red;
+  background-color: #30ff00;
   top: 15px;
   left: 61%;
   z-index: -1;
@@ -370,36 +371,9 @@ footer a .bi {
   font-size: large;
 }
 
-/* .cartcontainer{
-  background: lavender;
-  border: solid;
-  width: 30%;
-  height: 100%;
-  position: fixed;
-  top: 75px;
-  right: 0;
-  bottom: 0;
-  z-index: 1;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-.cbt{
-  border: solid red;
-  height: 50px;
-  gap: 20px;
-  width: 200px;
-  display: flex;
-  flex: 1 0 50%;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-}
-.cbt button{
-  padding: 5px;
-  width: 200px;
-} */
-.cartcontainer {
+/*  */
+
+.parentContainer{
   background: lavender;
   /* border: solid; */
   border-radius: 20px;
@@ -409,14 +383,44 @@ footer a .bi {
   top: 85px;
   right: 0;
   bottom: 0;
-  z-index: 1000;
+  z-index: 10000;
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 2px 2px 29px 4px rgba(0, 0, 0, 0.462);
+}
+.parentContainer h3{
+  font-weight: 100;
+  background-color: lavender;
+  width: 100%;
+  /* border: solid; */
+  text-align: center;
+}
+
+.cartcontainer {
+  /* background: lavender; */
+  /* border: solid; */
+  border-radius: 20px;
+  width: 90%;
+  height: 80%;
+  position: absolute;
+  left: -390px;
+  top: 5px;
+  z-index: -1;
   padding: 10px;
   transform: translateX(100%);
   margin: auto;
-  box-shadow: 2px 2px 29px 4px rgba(0, 0, 0, 0.462);
+  overflow-y: auto ;  
+  overflow-x: hidden;
+}
+.cartcontainer::-webkit-scrollbar{
+  background: #133567;
+  width: 10px;
+  border-radius: 10px;
+}
+.cartcontainer::-webkit-scrollbar-thumb{
+  border-radius: 10px;
+  background: lavender;
 }
 
 /* Styling for the button container */
@@ -477,6 +481,7 @@ footer a .bi {
   border-radius: 10px;
   background-color: rgb(236, 236, 248);
   margin-top: 10px;
+  width: 380px;
 }
 .items .image {
   /* border: solid blue; */
