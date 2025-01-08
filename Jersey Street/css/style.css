@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Alegreya;
-  
 }
 @font-face {
   font-family: Alegreya;
@@ -74,7 +73,7 @@ svg[alt="jerseyico"] {
   font-size: 1.1rem;
 }
 
-.countjersey{
+.countjersey {
   position: fixed;
   font-size: 14.5px;
   width: 20px;
@@ -84,9 +83,7 @@ svg[alt="jerseyico"] {
   top: 15px;
   left: 61%;
   z-index: -1;
-
 }
-
 
 .container {
   /**/
@@ -101,7 +98,7 @@ svg[alt="jerseyico"] {
   cursor: none;
 }
 .titlehead {
-  font-family: 'Alegreya_Italic';
+  font-family: "Alegreya_Italic";
   color: #133567;
 }
 .banner {
@@ -281,7 +278,6 @@ img[alt="ind"] {
   object-fit: cover;
   border-radius: 25px 25px 0 25px;
   /* border: solid; */
-  
 }
 
 #foj1 {
@@ -302,23 +298,22 @@ img[alt="ind"] {
 #foj6 {
   background-color: #790024ab;
 }
-footer{
+footer {
   margin-top: 50px;
 }
-footer{
+footer {
   background-color: lavender;
   border-top: 0.1px solid rgba(128, 128, 128, 0.305);
 }
-.footcontainer{
+.footcontainer {
   /* border: solid; */
   display: flex;
   justify-content: space-around;
   align-items: center;
   flex-wrap: wrap;
   padding: 20px;
- 
 }
-.logo-area{
+.logo-area {
   display: flex;
   /* flex-grow: 90; */
   /* border: solid; */
@@ -326,10 +321,10 @@ footer{
   justify-content: center;
   align-items: center;
 }
-.logo-area img{
+.logo-area img {
   width: 300px;
 }
-footer nav a{
+footer nav a {
   display: flex;
   justify-content: space-around;
   /* align-items: center; */
@@ -341,7 +336,7 @@ footer nav a{
   text-decoration: none;
 }
 
-.sociallinks a{
+.sociallinks a {
   display: flex;
   flex-direction: column;
   padding: 5px;
@@ -349,24 +344,24 @@ footer nav a{
   text-decoration: none;
   color: rgb(29, 23, 23);
 }
-footer a .bi{
+footer a .bi {
   font-size: 25px;
   /* border: solid; */
 }
-.tc a{
+.tc a {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  border-bottom: .1px solid rgb(29, 23, 23);
+  border-bottom: 0.1px solid rgb(29, 23, 23);
   color: rgb(29, 23, 23);
   padding: 20px;
   text-decoration: none;
 }
-#tos{
+#tos {
   border-bottom: none;
 }
-.copyrightarea{
+.copyrightarea {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -375,4 +370,140 @@ footer a .bi{
   font-size: large;
 }
 
+/* .cartcontainer{
+  background: lavender;
+  border: solid;
+  width: 30%;
+  height: 100%;
+  position: fixed;
+  top: 75px;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.cbt{
+  border: solid red;
+  height: 50px;
+  gap: 20px;
+  width: 200px;
+  display: flex;
+  flex: 1 0 50%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.cbt button{
+  padding: 5px;
+  width: 200px;
+} */
+.cartcontainer {
+  background: lavender;
+  /* border: solid; */
+  border-radius: 20px;
+  width: 30%;
+  height: 80%;
+  position: fixed;
+  top: 85px;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  transform: translateX(100%);
+  margin: auto;
+  box-shadow: 2px 2px 29px 4px rgba(0, 0, 0, 0.462);
+}
 
+/* Styling for the button container */
+.cbt {
+  /* border: solid red; */
+  height: 50px;
+  gap: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  position: absolute;
+  top: 82%;
+  padding: 10px;
+}
+
+/* Styling for buttons inside cbt */
+.cbt button {
+  padding: 5px;
+  flex: 1;
+  background-color: #30ff00;
+  height: 50px;
+  border-radius: 10px;
+  border: 0.1px solid rgba(128, 128, 128, 0.358);
+  font-size: 20px;
+}
+.cbt #close {
+  background-color: lavender;
+}
+.cbt button:hover {
+  background-color: #2cbf0baf;
+  cursor: pointer;
+}
+#close:hover {
+  background-color: rgba(184, 184, 197, 0.384);
+  cursor: pointer;
+}
+
+
+.number {
+  padding: 10px;
+}
+.cartcontainer.visible {
+  transform: translateX(0);
+}
+
+.hidden {
+  display: none;
+}
+
+/* cart css prop*/
+.items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: .1px solid rgba(128, 128, 128, 0.377);
+  padding: 4px;
+  border-radius: 10px;
+  background-color: rgb(236, 236, 248);
+  margin-top: 10px;
+}
+.items .image {
+  /* border: solid blue; */
+  border-radius: 10px;
+}
+.items .prodname {
+  /* border: solid red; */
+  padding: 10px;
+}
+.items .quantity {
+  padding: 10px;
+}
+.image img {
+  width: 90px;
+  border-radius: 10px;
+}
+.minus,
+.plus {
+  /* border: solid red; */
+  border: none;
+  background-color: #30ff00;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.minus:hover,
+.plus:hover {
+  background-color: rgba(151, 151, 172, 0.632);
+  cursor: pointer;
+}
